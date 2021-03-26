@@ -55,7 +55,7 @@ public  abstract class AppDatabase extends RoomDatabase {
                     dao.deleteAll();
                     Task task = new Task("title", "description", new Date(), new Date(), 1);
                     dao.insert(task);
-                    task = new Task("title", "description", new Date(), new Date(), 1);
+                    task = new Task("title1", "description1", new Date(), new Date(), 1);
                     dao.insert(task);
                 }
             });

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
 
-    private List<Task> taskList;
+    //private List<Task> taskList;
     private TaskAdapter adapter;
     private FloatingActionButton fab;
     private MainViewModel viewModel;
@@ -46,8 +46,11 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getAllTasks().observe(this, new Observer<List<Task>>() {
             @Override
             public void onChanged(List<Task> tasks) {
-                if(tasks != null)
-                    adapter.setData(taskList);
+                if(tasks != null){
+                    adapter.setData(tasks);
+
+                }
+
             }
         });
 
